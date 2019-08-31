@@ -4,7 +4,7 @@ import { moviesApi } from "../../api";
 
 export default class extends React.Component {
   state = {
-    nowplaying: null,
+    nowPlaying: null,
     upcoming: null,
     popular: null,
     error: null,
@@ -39,10 +39,12 @@ export default class extends React.Component {
   }
 
   render() {
-    const { nowplaying, upcoming, popular, error, loading } = this.state;
+    console.log("this is inside container");
+    console.log(this.state.nowPlaying);
+    const { nowPlaying, upcoming, popular, error, loading } = this.state;
     return (
       <HomePresenter
-        nowplaying={nowplaying}
+        nowPlaying={nowPlaying}
         upcoming={upcoming}
         popular={popular}
         error={error}
